@@ -1,7 +1,8 @@
-#include <string>
+#include <iostream>
 #include "../include/ressourceNum.h"
 
-RessourceNum::RessourceNum(std::string type, int taille, std::string nom, std::string url)
+RessourceNum::RessourceNum(string auteur, string nom, string type, int taille, string url)
+    : Media(IN, auteur)
 {
     this->_type = type;
     this->_nom = nom;

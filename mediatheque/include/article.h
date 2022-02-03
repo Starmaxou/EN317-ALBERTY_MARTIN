@@ -5,7 +5,8 @@
 
 class Article
 {
-    std::string _nom;
+    public:
+        std::string _nom;
 };
 
 #endif // ARTICLE_H

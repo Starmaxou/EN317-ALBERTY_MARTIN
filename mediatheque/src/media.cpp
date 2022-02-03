@@ -1,7 +1,7 @@
+#include <iostream>
 #include "../include/media.h"
 
-
-Media::Media(std::string auteur, status_media_t status)
+Media::Media(status_media_t status, string auteur)
 {
     this->_auteur = auteur;
     this->_status = status;

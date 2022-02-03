@@ -1,12 +1,17 @@
 #ifndef MEDIA_H
 #define MEDIA_H
 
+#include <iostream>
 #include <string>
 
-#include "ressourceNum.h"
-#include "livre.h"
+//#include "ressourceNum.h"
+//#include "livre.h"
+//#include "VHS.h"
 
-enum status_media_t{
+using namespace std;
+
+enum status_media_t
+{
     IN = 0, // Rendu, présent
     HOLD,   // Reserver
     OUT     // Emprunter
@@ -15,10 +20,11 @@ enum status_media_t{
 class Media
 {
     public:
-        std::string _auteur;
+        string _auteur;
         status_media_t _status; // Status Reserver, Emprunter, Rendu
 
-        Media(std::string auteur, status_media_t status);
+        Media(status_media_t status, string auteur);
+        virtual ~Media(){};
 };
 
 

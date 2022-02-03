@@ -2,17 +2,21 @@
 #define RESSOURCENUM_H
 
 #include <string>
+#include "media.h"
 
-class RessourceNum
+using namespace std;
+
+class RessourceNum : public Media
 {
     public:
-        std::string _type;
+        RessourceNum(string auteur, string nom, string type, int taille, string url);
+
+        string _type;
         int _taille;
-        std::string _nom;
-        std::string _url;
+        string _nom;
+        string _url;
 
-        RessourceNum(std::string type, int taille, std::string nom, std::string url);
-
+    
 };
 
 #endif // RESSOURCENUM_H

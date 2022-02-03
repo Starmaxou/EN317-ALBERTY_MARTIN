@@ -7,7 +7,7 @@
 #include "livre.h"
 #include "article.h"
 
-class Revue
+class Revue : public Livre
 {
     public:
         std::string _editeur;

@@ -3,5 +3,5 @@
 
 Mediatheque::Mediatheque()
 {
-  std::cout << "[DEBUG] - " << __PRETTY_FUNCTION__ << std::endl;  
+  std::cout << "[DEBUG] - " << __PRETTY_FUNCTION__ << std::endl;
 }

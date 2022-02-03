@@ -2,14 +2,17 @@
 #define VHS_H
 
 #include <string>
+#include "media.h"
 
-class Vhs
+using namespace std;
+
+class VHS : public Media
 {
     public:
         int _duree;
-        std::string _maisonProd;
+        string _maisonProd;
 
-        Vhs();
-}
+        VHS();
+};
 
 #endif // VHS_H

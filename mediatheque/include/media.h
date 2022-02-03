@@ -13,6 +13,7 @@ class Media
 
     public:
         Media(std::string auteur, int status);
+        Media();
 };
 
 

@@ -3,6 +3,8 @@
 
 #include "../include/media.h"
 #include <string>
+#include <iostream>
+
 
 class Livre : public Media
 {
@@ -12,6 +14,8 @@ class Livre : public Media
         std::string _collection;
         std::string _titre;
         std::string _resume;
+    public :
+        Livre();
 };
 
 #endif // LIBRE_H

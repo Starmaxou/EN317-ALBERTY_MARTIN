@@ -5,13 +5,12 @@
 
 class RessourceNum
 {
-    private:
+    public:
         std::string _type;
         int _taille;
         std::string _nom;
         std::string _url;
 
-    public:
         RessourceNum(std::string type, int taille, std::string nom, std::string url);
 
 };

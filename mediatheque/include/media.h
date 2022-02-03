@@ -3,16 +3,22 @@
 
 #include <string>
 
-#include "../include/ressourceNum.h"
+#include "ressourceNum.h"
+#include "livre.h"
+
+enum status_media_t{
+    IN = 0, // Rendu, présent
+    HOLD,   // Reserver
+    OUT     // Emprunter
+};
 
 class Media
 {
-    private:
-        std::string _auteur;
-        int _status; // Status Reverser, Emprunter, Rendu
-
     public:
-        Media(std::string auteur, int status);
+        std::string _auteur;
+        status_media_t _status; // Status Reserver, Emprunter, Rendu
+
+        Media(std::string auteur, status_media_t status);
 };
 
 

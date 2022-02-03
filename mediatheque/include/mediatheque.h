@@ -3,14 +3,13 @@
 
 #include <vector>
 
-#include "../include/media.h"
+#include "media.h"
 
 class Mediatheque
 {
-    private:
+    public:
         std::vector<Media> _ressource;
 
-    public:
         Mediatheque();
         int addMedia();
         int deleteMedia();

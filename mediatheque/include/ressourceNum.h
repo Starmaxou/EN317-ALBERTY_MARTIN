@@ -8,14 +8,14 @@ using namespace std;
 
 class RessourceNum : public Media
 {
-    public:
-        RessourceNum(string auteur, string nom, string type, int taille, string url);
-
+    protected:
         string _type;
         int _taille;
         string _nom;
         string _url;
 
+    public:
+        RessourceNum(string auteur, string nom, string type, int taille, string url);
     
 };
 

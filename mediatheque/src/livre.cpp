@@ -1,4 +1,3 @@
-
 #include "../include/livre.h"
 
 Livre::Livre(string auteur, string titre, string collection, int annee, int nbPage, string resume)

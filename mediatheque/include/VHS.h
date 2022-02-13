@@ -8,10 +8,11 @@ using namespace std;
 
 class VHS : public Media
 {
-    public:
+    protected:
         int _duree;
         string _maisonProd;
-
+        
+    public:
         VHS();
 };
 

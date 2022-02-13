@@ -19,10 +19,11 @@ enum status_media_t
 
 class Media
 {
-    public:
+    protected:
         string _auteur;
         status_media_t _status; // Status Reserver, Emprunter, Rendu
 
+    public:
         Media(status_media_t status, string auteur);
         virtual ~Media(){};
 };

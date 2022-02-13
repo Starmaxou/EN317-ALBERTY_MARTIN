@@ -5,10 +5,11 @@
 
 class CD : public DVD
 {
-    public:
+    protected:
         int _duree;
         std::string _maisonProd;
 
+    public:
         CD();
 }
 

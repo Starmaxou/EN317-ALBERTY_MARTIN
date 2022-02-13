@@ -9,11 +9,12 @@
 
 class Revue : public Livre
 {
-    public:
+    protected:
         std::string _editeur;
         int nbArticle;
         std::vector<Article> _listArticle;
-
+        
+    public:
         Revue();
 
 };

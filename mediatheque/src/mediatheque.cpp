@@ -5,3 +5,8 @@ Mediatheque::Mediatheque()
 {
   std::cout << "[DEBUG] - " << __PRETTY_FUNCTION__ << std::endl;
 }
+
+Mediatheque::~Mediatheque()
+{
+  
+}

@@ -7,10 +7,9 @@
 
 class Mediatheque
 {
-    public:
+    protected:
         std::vector<Media> _ressource;
 
-        Mediatheque();
         int addMedia();
         int deleteMedia();
         int listMedia();
@@ -18,6 +17,10 @@ class Mediatheque
         int saveToFile();
         int loadFromFile();
         int bookMedia();
+
+    public:
+        Mediatheque();    
+        ~Mediatheque();
 };
 
 

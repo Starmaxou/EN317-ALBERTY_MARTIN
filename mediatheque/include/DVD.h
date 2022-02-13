@@ -5,10 +5,11 @@
 
 class DVD : public VHS
 {
-    public:
+    protected:
         int _duree;
         std::string _maisonProd;
-
+        
+    public:
         DVD();
 }
 

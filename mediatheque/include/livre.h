@@ -20,6 +20,7 @@ class Livre : public Media
     public:
         Livre();  
         Livre(string auteur, string titre, string collection, int annee, int anbPage, string resume);
+        friend ostream& operator<<(ostream& out, Livre s);
 };
 
 #endif // LIVRE_H

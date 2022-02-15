@@ -19,3 +19,14 @@ Livre::Livre(string auteur, string titre, string collection, int annee, int nbPa
     this->_nbPage = nbPage;
     this->_resume = resume;
 }
+ostream& operator<<(ostream& out, Livre s) {
+    out << "Livre" << endl;
+    out << (Media) s;
+    out << "Titre : " << s._titre << endl;
+    out << "Collection : " << s._collection << endl;
+    out << "Annee : " << s._annee << endl;
+    out << "Nb de Pages : " << s._nbPage << endl;
+    out << "Résumé : " << endl << s._resume << endl << endl;
+
+    return out;
+}

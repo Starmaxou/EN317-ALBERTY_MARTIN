@@ -2,8 +2,11 @@
 #define MEDIATHEQUE_H
 
 #include <vector>
+#include <iostream>
 
 #include "media.h"
+
+using namespace std;
 
 class Mediatheque
 {
@@ -18,6 +21,9 @@ class Mediatheque
         int loadFromFile();
         int bookMedia();
 
+    public :
+        Mediatheque();
+        ~Mediatheque();
         // DEBUG
         void test_command();
 };

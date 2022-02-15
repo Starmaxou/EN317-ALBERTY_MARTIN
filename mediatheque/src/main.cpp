@@ -7,8 +7,6 @@ int main(void)
 {
     Mediatheque alpha;
 
-    alpha.test_command();
-
     Livre();    
 
     return 0;

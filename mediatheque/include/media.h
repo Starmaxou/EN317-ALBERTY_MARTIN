@@ -37,6 +37,7 @@ class Media
         Media();
         Media(status_media_t status, string auteur);
         virtual ~Media(){};
+        friend ostream& operator<<(ostream& out, Media s);
 };
 
 

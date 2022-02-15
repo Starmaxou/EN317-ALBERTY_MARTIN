@@ -15,3 +15,24 @@ Media::Media(status_media_t status, string auteur)
     this->_auteur = auteur;
     this->_status = status;
 }
+
+ostream& operator<<(ostream& out, Media s) {
+    out << "Auteur : " << s._auteur << endl;
+    out << "Status : ";
+    switch (s._status) {
+        case IN :
+            out << "Accessible";
+            break;
+        case HOLD :
+            out << "Reserver";
+            break;
+        case OUT :
+            out << "Emprunté";
+            break;
+        default :
+            out << "Inconnu";
+            break;
+    }
+    out << endl;
+    return out;
+}

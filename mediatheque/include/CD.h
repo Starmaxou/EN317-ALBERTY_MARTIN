@@ -13,6 +13,8 @@ class CD : public DVD
 
     public:
         CD();
+        friend ostream& operator<<(ostream& out, CD s);
+        
 };
 
 #endif // CD_H

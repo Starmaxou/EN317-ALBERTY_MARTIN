@@ -18,3 +18,12 @@ RessourceNum::RessourceNum(string auteur, string nom, string type, int taille, s
     this->_taille = taille;
     this->_url = url;
 }
+
+ostream& operator<<(ostream& out, RessourceNum s) {
+    out << (Media) s;
+    out << "Type de ressource : " << s._type << endl;
+    out << "Taille (en octet) : " << s._taille << endl;
+    out << "Nom : " << s._nom << endl;
+    out << "URL : " << s._url << endl;
+    return out;
+}

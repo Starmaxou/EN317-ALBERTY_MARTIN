@@ -11,6 +11,7 @@ class DVD : public VHS
         
     public:
         DVD();
+        friend ostream& operator<<(ostream& out, DVD s);
 };
 
 #endif // DVD_H

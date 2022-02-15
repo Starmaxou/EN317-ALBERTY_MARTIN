@@ -14,6 +14,7 @@ class VHS : public Media
         
     public:
         VHS();
+        friend ostream& operator<<(ostream& out, VHS s);
 };
 
 #endif // VHS_H

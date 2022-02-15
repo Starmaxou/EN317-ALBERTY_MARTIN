@@ -21,9 +21,9 @@ enum type_media_t
 {
     LIVRE = 0,
     REVUE,
-    CD,
-    VHS,
-    DVD,
+    CD_T,
+    VHS_T,
+    DVD_T,
     RESNUM
 };
 

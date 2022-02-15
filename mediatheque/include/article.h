@@ -12,6 +12,8 @@ class Article
 
     public:
         Article(string name);
+        friend ostream& operator<<(ostream& out, Article s);
+        
 };
 
 #endif // ARTICLE_H

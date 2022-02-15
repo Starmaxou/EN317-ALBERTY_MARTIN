@@ -10,6 +10,11 @@ class Mediatheque
     protected:
         std::vector<Media> _ressource;
 
+    public:
+        Mediatheque();    
+        ~Mediatheque();
+
+        // Method
         int addMedia(Media mediaAdd);
         int deleteMedia();
         int listMedia();
@@ -17,10 +22,6 @@ class Mediatheque
         int saveToFile();
         int loadFromFile();
         int bookMedia();
-
-    public:
-        Mediatheque();    
-        ~Mediatheque();
 
         // DEBUG
         void test_command();

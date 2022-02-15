@@ -11,7 +11,7 @@ class Revue : public Livre
 {
     protected:
         std::string _editeur;
-        int nbArticle;
+        int _nbArticle;
         std::vector<Article> _listArticle;
         
     public:

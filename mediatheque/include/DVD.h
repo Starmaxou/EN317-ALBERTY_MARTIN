@@ -2,15 +2,15 @@
 #define DVD_H
 
 #include <string>
+#include "VHS.h"
 
 class DVD : public VHS
 {
     protected:
-        int _duree;
-        std::string _maisonProd;
+        int _nbPiste;
         
     public:
         DVD();
-}
+};
 
-#endif
+#endif // DVD_H

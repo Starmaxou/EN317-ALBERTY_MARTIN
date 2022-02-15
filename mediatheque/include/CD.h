@@ -2,15 +2,17 @@
 #define CD_H
 
 #include <string>
+#include "DVD.h"
+
+using namespace std;
 
 class CD : public DVD
 {
     protected:
-        int _duree;
-        std::string _maisonProd;
+        string _titre;
 
     public:
         CD();
-}
+};
 
 #endif // CD_H

@@ -1,6 +1,15 @@
 #include <iostream>
 #include "../include/ressourceNum.h"
 
+RessourceNum::RessourceNum()
+    :Media()
+{
+    cout << "Entrez le type : "; cin >> this->_type;
+    cout << "Entrez le nom : "; cin >> this->_nom;
+    cout << "Entrez la taille : "; cin >> this->_taille;
+    cout << "Entrez l'url : "; cin >> this->_url;
+}
+
 RessourceNum::RessourceNum(string auteur, string nom, string type, int taille, string url)
     : Media(IN, auteur)
 {

@@ -17,7 +17,8 @@ class Livre : public Media
         int _nbPage; // Nombre de page        
         string _resume;     
 
-    public:  
+    public:
+        Livre();  
         Livre(string auteur, string titre, string collection, int annee, int anbPage, string resume);
 };
 

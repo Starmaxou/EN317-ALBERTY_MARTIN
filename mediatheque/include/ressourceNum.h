@@ -15,6 +15,7 @@ class RessourceNum : public Media
         string _url;
 
     public:
+        RessourceNum();
         RessourceNum(string auteur, string nom, string type, int taille, string url);
     
 };

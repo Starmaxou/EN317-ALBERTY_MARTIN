@@ -21,6 +21,7 @@ class Livre : public Media
         Livre();  
         Livre(string auteur, string titre, string collection, int annee, int anbPage, string resume);
         friend ostream& operator<<(ostream& out, Livre s);
+        string afficheInfo() const;
 };
 
 #endif // LIVRE_H

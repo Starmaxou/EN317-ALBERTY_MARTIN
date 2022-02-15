@@ -11,9 +11,10 @@ using namespace std;
 class Mediatheque
 {
     protected:
-        std::vector<Media> _ressource;
+        
 
     public :
+    std::vector<Media> _ressource;
         Mediatheque();
         ~Mediatheque();
         int addMedia(Media mediaAdd);
@@ -23,6 +24,7 @@ class Mediatheque
         int saveToFile();
         int loadFromFile();
         int bookMedia();
+        int showMedia();
         // DEBUG
         void test_command();
 };

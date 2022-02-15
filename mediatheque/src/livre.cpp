@@ -12,6 +12,7 @@ Livre::Livre()
     cout << "Entrez l'année : "; cin >> this->_annee;
     cout << "Entrez le nombre de page : "; cin >> this->_nbPage;
     cout << "Entrez un résumé (facultatif) : "; cin >> this->_resume;
+    cout << endl;
     this->_type = livre_t;
 }
 
@@ -43,12 +44,22 @@ Livre::Livre(string auteur, string titre, string collection, int annee, int nbPa
  * @return ostream& 
  */
 ostream& operator<<(ostream& out, Livre s) {
-    out << (Media) s;
-    out << "Titre : " << s._titre << endl;
-    out << "Collection : " << s._collection << endl;
-    out << "Annee : " << s._annee << endl;
-    out << "Nb de Pages : " << s._nbPage << endl;
-    out << "Résumé : " << endl << s._resume << endl << endl;
+    out << s.afficheInfo();
+    return out;
+}
+
+/**
+ * @brief Affichage des informations
+ * 
+ */
+string Livre::afficheInfo() const
+{
+    string out;
+
+    out = Media::afficheInfo() +
+        "Titre : " + this->_titre + '\n' +
+        "Collection : " + this->_collection + '\n' +
+        "Résumé : " + '\n' + this->_resume + '\n' + '\n';
 
     return out;
 }

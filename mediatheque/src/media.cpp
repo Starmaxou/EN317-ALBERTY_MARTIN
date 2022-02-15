@@ -26,6 +26,11 @@ Media::Media(status_media_t status, string auteur)
     this->_status = status;
 }
 
+int Media::getID()
+{
+    return this->_id;
+}
+
 /**
  * @brief Surcharge de l'opérateur "<<"
  * 
@@ -34,22 +39,35 @@ Media::Media(status_media_t status, string auteur)
  * @return ostream& 
  */
 ostream& operator<<(ostream& out, Media s) {
-    out << "Auteur : " << s._auteur << endl;
-    out << "Status : ";
-    switch (s._status) {
+    out << s.afficheInfo();
+    return out;
+}
+
+/**
+ * @brief Affichage des informations
+ * 
+ */
+string Media::afficheInfo() const
+{
+    string out, stat;
+
+    switch (this->_status) {
         case IN :
-            out << "Accessible";
+            stat = "Accessible";
             break;
         case HOLD :
-            out << "Reserver";
+            stat = "Reserver";
             break;
         case OUT :
-            out << "Emprunté";
+            stat = "Emprunté";
             break;
         default :
-            out << "Inconnu";
+            stat = "Inconnu";
             break;
     }
-    out << endl;
+
+    out = "Auteur : " + this->_auteur + '\n' + "Status : " + stat + '\n';
+        //"Type : " << this->_type +  '\n';
+
     return out;
 }

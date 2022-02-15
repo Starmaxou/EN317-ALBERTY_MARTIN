@@ -28,24 +28,25 @@ enum type_media_t
     revue_t,
     cd_t,
     vhs_t,
-    dvd_t,
-    revue_t
+    dvd_t
 };
 
 class Media
 {
     protected:
-        int _id;                //< identifiant du média
         type_media_t _type;     //< type du média
         string _auteur;         //< auteur du média
         status_media_t _status; //< Status du média
         
 
     public:
+        int _id;                //< identifiant du média
         Media();
         Media(status_media_t status, string auteur);
         virtual ~Media(){};
         friend ostream& operator<<(ostream& out, Media s);
+        int getID();
+        virtual string afficheInfo() const;
 };
 
 

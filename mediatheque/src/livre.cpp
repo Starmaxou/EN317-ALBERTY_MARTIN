@@ -1,5 +1,9 @@
 #include "../include/livre.h"
 
+/**
+ * @brief Construct a new Livre:: Livre object
+ * 
+ */
 Livre::Livre()
     :Media()
 {
@@ -8,8 +12,19 @@ Livre::Livre()
     cout << "Entrez l'année : "; cin >> this->_annee;
     cout << "Entrez le nombre de page : "; cin >> this->_nbPage;
     cout << "Entrez un résumé (facultatif) : "; cin >> this->_resume;
+    this->_type = livre_t;
 }
 
+/**
+ * @brief Construct a new Livre:: Livre object
+ * 
+ * @param auteur 
+ * @param titre 
+ * @param collection 
+ * @param annee 
+ * @param nbPage 
+ * @param resume 
+ */
 Livre::Livre(string auteur, string titre, string collection, int annee, int nbPage, string resume)
     : Media(IN, auteur)
 {
@@ -19,6 +34,14 @@ Livre::Livre(string auteur, string titre, string collection, int annee, int nbPa
     this->_nbPage = nbPage;
     this->_resume = resume;
 }
+
+/**
+ * @brief Surcharge de l'opérateur "<<" pour affichage des informations
+ * 
+ * @param out 
+ * @param s 
+ * @return ostream& 
+ */
 ostream& operator<<(ostream& out, Livre s) {
     out << (Media) s;
     out << "Titre : " << s._titre << endl;

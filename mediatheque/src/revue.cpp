@@ -1,5 +1,9 @@
 #include "../include/revue.h"
 
+/**
+ * @brief Construct a new Revue:: Revue object
+ * 
+ */
 Revue::Revue()
     :Livre()
 {
@@ -7,6 +11,13 @@ Revue::Revue()
     cout << "Entrez le nombre d'article : "; cin >> this->_nbArticle;
 }
 
+/**
+ * @brief Surcharge de l'opérateur "<<" pour affichage des informations
+ * 
+ * @param out 
+ * @param s 
+ * @return ostream& 
+ */
 ostream& operator<<(ostream& out, Revue s) {
 
     out << (Livre) s;

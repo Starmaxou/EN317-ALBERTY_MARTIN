@@ -4,34 +4,42 @@
 #include <iostream>
 #include <string>
 
-//#include "ressourceNum.h"
-//#include "livre.h"
-//#include "VHS.h"
-
 using namespace std;
 
+/**
+ * @brief Enumération du status du média
+ * 
+ */
 enum status_media_t
 {
-    IN = 0, // Rendu, présent
-    HOLD,   // Reserver
-    OUT     // Emprunter
+    IN = 0, //< Rendu, présent
+    HOLD,   //< Reserver
+    OUT     //< Emprunter
 };
 
+
+/**
+ * @brief Enumération des types de média possible
+ * 
+ */
 enum type_media_t
 {
-    LIVRE = 0,
-    REVUE,
-    CD_T,
-    VHS_T,
-    DVD_T,
-    RESNUM
+    livre_t = 0,
+    revue_t,
+    cd_t,
+    vhs_t,
+    dvd_t,
+    revue_t
 };
 
 class Media
 {
     protected:
-        string _auteur;
-        status_media_t _status; // Status Reserver, Emprunter, Rendu
+        int _id;                //< identifiant du média
+        type_media_t _type;     //< type du média
+        string _auteur;         //< auteur du média
+        status_media_t _status; //< Status du média
+        
 
     public:
         Media();

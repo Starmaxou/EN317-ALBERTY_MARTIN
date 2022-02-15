@@ -1,10 +1,18 @@
 #include "../include/mediatheque.h"
 
+/**
+ * @brief Construct a new Mediatheque:: Mediatheque object
+ * 
+ */
 Mediatheque::Mediatheque()
 {
   cout << "[DEBUG] - " << __PRETTY_FUNCTION__ << endl;
 }
 
+/**
+ * @brief Destroy the Mediatheque:: Mediatheque object
+ * 
+ */
 Mediatheque::~Mediatheque()
 {
   

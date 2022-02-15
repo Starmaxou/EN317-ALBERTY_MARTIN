@@ -1,6 +1,10 @@
 #include <iostream>
 #include "../include/media.h"
 
+/**
+ * @brief Construct a new Media:: Media object
+ * 
+ */
 Media::Media()
 {
     cout << "-- Création d'un média --" << endl;
@@ -10,12 +14,25 @@ Media::Media()
     this->_status = IN; //Création du média, présent par défaut
 }
 
+/**
+ * @brief Construct a new Media:: Media object
+ * 
+ * @param status 
+ * @param auteur 
+ */
 Media::Media(status_media_t status, string auteur)
 {
     this->_auteur = auteur;
     this->_status = status;
 }
 
+/**
+ * @brief Surcharge de l'opérateur "<<"
+ * 
+ * @param out 
+ * @param s 
+ * @return ostream& 
+ */
 ostream& operator<<(ostream& out, Media s) {
     out << "Auteur : " << s._auteur << endl;
     out << "Status : ";

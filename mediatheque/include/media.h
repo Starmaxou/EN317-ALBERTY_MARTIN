@@ -17,6 +17,16 @@ enum status_media_t
     OUT     // Emprunter
 };
 
+enum type_media_t
+{
+    LIVRE = 0,
+    REVUE,
+    CD,
+    VHS,
+    DVD,
+    RESNUM
+};
+
 class Media
 {
     protected:

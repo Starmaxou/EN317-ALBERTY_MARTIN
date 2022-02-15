@@ -7,5 +7,7 @@ int main(void)
 {
     Mediatheque alpha;
 
+    alpha.test_command();
+
     return 0;
 }

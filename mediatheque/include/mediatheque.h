@@ -10,22 +10,27 @@ using namespace std;
 
 class Mediatheque
 {
+    private :
+        vector<Media *> _save_ressource;
+        bool _search_mode = false;
     protected:
-        std::vector<Media> _ressource;
-
-        int addMedia(Media mediaAdd);
-        int deleteMedia();
-        int listMedia();
-        int searchMedia();
-        int saveToFile();
-        int loadFromFile();
-        int bookMedia();
+        vector<Media *> _ressource;
 
     public :
         Mediatheque();
         ~Mediatheque();
-        // DEBUG
-        void test_command();
+
+        int addMedia(Media * mediaAdd);
+        int deleteMedia();
+
+        int listMedia();
+        int searchMedia();
+        int clearMedia();
+
+        int saveToFile();
+        int loadFromFile();
+        int bookMedia();
+
 };
 
 

@@ -16,10 +16,22 @@ Media::Media(status_media_t status, string auteur)
     this->_status = status;
 }
 
-ostream& operator<<(ostream& out, Media s) {
-    out << "Auteur : " << s._auteur << endl;
+/*bool Media::recherche(string search) {
+    if (_auteur.find(search) != -1)
+        return true;
+    else
+        return false;
+}*/
+
+ostream& operator<<(ostream& out, Media & s) {
+    s.getInfo(out);
+    return out;
+}
+
+ostream& Media::getInfo(ostream& out){
+    out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
-    switch (s._status) {
+    switch (this->_status) {
         case IN :
             out << "Accessible";
             break;

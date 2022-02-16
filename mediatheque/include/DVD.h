@@ -11,7 +11,10 @@ class DVD : public VHS
         
     public:
         DVD();
-        friend ostream& operator<<(ostream& out, DVD s);
+        //friend ostream& operator<<(ostream& out, DVD s);
+        virtual ostream& getInfo(ostream& out);
+        void test();
+        virtual bool recherche (string search);
 };
 
 #endif // DVD_H

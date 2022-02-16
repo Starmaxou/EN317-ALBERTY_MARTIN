@@ -14,7 +14,9 @@ class VHS : public Media
         
     public:
         VHS();
-        friend ostream& operator<<(ostream& out, VHS s);
+        //friend ostream& operator<<(ostream& out, VHS s);
+        ostream& getInfo(ostream& out);
+        virtual bool recherche(string search);
 };
 
 #endif // VHS_H

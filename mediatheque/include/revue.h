@@ -18,7 +18,9 @@ class Revue : public Livre
         
     public:
         Revue();
-        friend ostream& operator<<(ostream& out, Revue s);
+        //friend ostream& operator<<(ostream& out, Revue s);
+        ostream& getInfo(ostream& out);
+        bool recherche (string search);
 };
 
 #endif // REVUE_H

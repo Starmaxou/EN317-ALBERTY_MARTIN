@@ -37,7 +37,13 @@ class Media
         Media();
         Media(status_media_t status, string auteur);
         virtual ~Media(){};
-        friend ostream& operator<<(ostream& out, Media s);
+        
+        // Surcharge
+        friend ostream& operator<<(ostream& out, Media & s);
+
+        // Méthode
+        virtual bool recherche(string search) = 0;
+        virtual ostream& getInfo(ostream& out);
 };
 
 

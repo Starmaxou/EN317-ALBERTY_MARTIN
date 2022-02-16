@@ -3,17 +3,16 @@
 
 #include "livre.h"
 #include <string>
+
 using namespace std;
 
 class Article
 {
-    protected:
-        string _nom;
-
     public:
+        string _nom;
         Article(string name);
         friend ostream& operator<<(ostream& out, Article s);
-        
+
 };
 
 #endif // ARTICLE_H

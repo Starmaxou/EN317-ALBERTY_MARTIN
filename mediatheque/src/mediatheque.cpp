@@ -1,5 +1,7 @@
 #include "../include/mediatheque.h"
 
+int ID_generate = 0;
+
 Mediatheque::Mediatheque()
 {
   //cout << "[DEBUG] - " << __PRETTY_FUNCTION__ << endl;
@@ -11,7 +13,10 @@ Mediatheque::~Mediatheque()
 }
 
 int Mediatheque::addMedia(Media * mediaAdd) {
+  mediaAdd->_id = ID_generate;
   _ressource.push_back(mediaAdd);
+
+  ID_generate++;
 
   return 0;
 }

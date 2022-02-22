@@ -25,18 +25,18 @@ ostream& VHS::getInfo(ostream& out) {
             break;
     }
     out << endl;
+    out << "ID : " << _id;
+    out << endl;
     out << "Durée : " << this->_duree << endl;
     out << "Maison de Production : " << this->_maisonProd << endl;
     return out;
 }
 
 bool VHS::recherche(string search) {
-    if (_auteur.find(search) != -1)
-        return true; 
-    else if (_maisonProd.find(search) != -1)
+    if (_maisonProd.find(search) != -1)
         return true;
     else if (to_string(_duree).find(search) != -1)
         return true;
     else
-        return false;
+        return Media::recherche(search);
 }

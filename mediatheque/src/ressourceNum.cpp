@@ -37,6 +37,8 @@ ostream& RessourceNum::getInfo(ostream& out) {
             break;
     }
     out << endl;
+    out << "ID : " << _id;
+    out << endl;
     out << "Type de ressource : " << this->_type << endl;
     out << "Taille (en octet) : " << this->_taille << endl;
     out << "Nom : " << this->_nom << endl;
@@ -53,8 +55,6 @@ bool RessourceNum::recherche (string search) {
         return true;
     else if (_url.find(search) != -1)
         return true;
-    else if (_auteur.find(search) != -1)
-        return true;
     else
-        return false;
+        return Media::recherche(search);
 }

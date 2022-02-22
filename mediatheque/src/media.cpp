@@ -16,12 +16,12 @@ Media::Media(status_media_t status, string auteur)
     this->_status = status;
 }
 
-/*bool Media::recherche(string search) {
+bool Media::recherche(string search) {
     if (_auteur.find(search) != -1)
         return true;
     else
         return false;
-}*/
+}
 
 ostream& operator<<(ostream& out, Media & s) {
     s.getInfo(out);
@@ -46,5 +46,30 @@ ostream& Media::getInfo(ostream& out){
             break;
     }
     out << endl;
+    out << "ID : " << _id;
+    out << endl;
     return out;
+}
+
+void Media::printList() {
+    cout << "Auteur : " << this->_auteur << endl;
+    cout << "Status : ";
+    switch (this->_status) {
+        case IN :
+            cout << "Accessible";
+            break;
+        case HOLD :
+            cout << "Reserver";
+            break;
+        case OUT :
+            cout << "Emprunté";
+            break;
+        default :
+            cout << "Inconnu";
+            break;
+    }
+    cout << endl;
+    cout << "ID : " << _id;
+    cout << endl;
+    return;
 }

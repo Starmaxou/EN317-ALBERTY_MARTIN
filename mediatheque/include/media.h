@@ -37,15 +37,17 @@ class Media
         int _id;
         Media();
         Media(status_media_t status, string auteur);
-        virtual ~Media(){};
+        //virtual ~Media(){};
         
         // Surcharge
         friend ostream& operator<<(ostream& out, Media & s);
+        //friend ostream& operator<<(ostream& out, Media s);
 
         // Méthode
-        virtual bool recherche(string search) = 0;
+        virtual bool recherche(string search);
         virtual ostream& getInfo(ostream& out);
-};
+        void printList();
+};      
 
 
 #endif // MEDIA_H

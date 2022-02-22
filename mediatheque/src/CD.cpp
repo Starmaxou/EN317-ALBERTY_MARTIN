@@ -13,7 +13,7 @@ ostream& operator<<(ostream& out, CD s) {
 }
 
 bool CD::recherche (string search) {
-    if (_auteur.find(search) != -1)
+    /*if (_auteur.find(search) != -1)
         return true; 
     else if (_maisonProd.find(search) != -1)
         return true;
@@ -21,10 +21,11 @@ bool CD::recherche (string search) {
         return true;
     else if (to_string(_nbPiste).find(search) != -1)
         return true;
-    else if (_titre.find(search) != -1)
+    else*/
+    if (_titre.find(search) != -1)
         return true;
     else
-        return false;
+        return DVD::recherche(search);
 }
 
 ostream& CD::getInfo(ostream& out) {
@@ -44,6 +45,8 @@ ostream& CD::getInfo(ostream& out) {
             out << "Inconnu";
             break;
     }
+    out << endl;
+    out << "ID : " << _id;
     out << endl;
     out << "Durée : " << this->_duree << endl;
     out << "Maison de Production : " << this->_maisonProd << endl;

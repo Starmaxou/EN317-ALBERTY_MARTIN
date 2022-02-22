@@ -37,6 +37,8 @@ ostream& Livre::getInfo(ostream& out) {
             break;
     }
     out << endl;
+    out << "ID : " << _id;
+    out << endl;
     out << "Titre : " << this->_titre << endl;
     out << "Collection : " << this->_collection << endl;
     out << "Annee : " << this->_annee << endl;
@@ -47,10 +49,7 @@ ostream& Livre::getInfo(ostream& out) {
 }
 
 bool Livre::recherche (string search) {
-
-    if (_auteur.find(search) != -1)
-        return true;
-    else if (_titre.find(search) != -1)
+    if (_titre.find(search) != -1)
         return true;
     else if (to_string(this->_annee).find(search) != -1)
         return true;
@@ -59,6 +58,6 @@ bool Livre::recherche (string search) {
     else if (_resume.find(search) != -1)
         return true;
     else
-        return false;
+        return Media::recherche(search);
 
 }

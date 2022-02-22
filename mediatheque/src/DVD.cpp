@@ -25,6 +25,8 @@ ostream& DVD::getInfo(ostream& out) {
             break;
     }
     out << endl;
+    out << "ID : " << _id;
+    out << endl;
     out << "Durée : " << this->_duree << endl;
     out << "Maison de Production : " << this->_maisonProd << endl;
     out << "Nb de Piste : " << this->_nbPiste << endl;
@@ -33,14 +35,8 @@ ostream& DVD::getInfo(ostream& out) {
 
 
 bool DVD::recherche(string search) {
-    if (_auteur.find(search) != string::npos)
-        return true; 
-    else if (_maisonProd.find(search) != string::npos)
-        return true;
-    else if (to_string(_duree).find(search) != string::npos)
-        return true;
-    else if (to_string(_nbPiste).find(search) != string::npos)
+    if (to_string(_nbPiste).find(search) != string::npos)
         return true;
     else
-        return false;
+        return VHS::recherche(search);
 }

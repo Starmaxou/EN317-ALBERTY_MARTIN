@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../include/mediatheque.h"
 
 int ID_generate = 0;
@@ -50,6 +51,16 @@ int Mediatheque::searchMedia() {
 int Mediatheque::clearMedia() {
   _search_mode = false;
   _ressource = _save_ressource;
+  _save_ressource.clear();
+
+  return 0;
+}
+
+int Mediatheque::listMedia() {
+
+    for (int i = 0; i < _ressource.size() ; i++) {
+      _ressource[i]->printList();
+    }
 
   return 0;
 }

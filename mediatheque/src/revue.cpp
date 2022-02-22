@@ -26,6 +26,8 @@ ostream& Revue::getInfo(ostream& out) {
             break;
     }
     out << endl;
+    out << "ID : " << _id;
+    out << endl;
     out << "Titre : " << this->_titre << endl;
     out << "Collection : " << this->_collection << endl;
     out << "Annee : " << this->_annee << endl;

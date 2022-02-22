@@ -12,11 +12,11 @@ int main(void)
 {
     Mediatheque alpha;
 
-    DVD test;
+    VHS test;
     
     alpha.addMedia(&test);
     //cout << test;
-    alpha.searchMedia();
+    alpha.listMedia();
 
     return 0;
 }

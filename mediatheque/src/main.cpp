@@ -1,11 +1,30 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+
 #include "../include/commande.h"
+#include "../include/mediatheque.h"
+#include "../include/livre.h"
+#include "../include/DVD.h"
+#include "../include/VHS.h"
+#include "../include/CD.h"
+#include "../include/media.h"
 
 using namespace std;
 
 int main (void) {
+
+    Mediatheque alpha;
+
+    VHS test;
+    
+    alpha.addMedia(&test);
+    cout << endl;
+    alpha.showID(0);
+    cout << endl;
+    alpha.deleteID(0);
+    cout << endl;
+    alpha.showID(0);
 
     int exit_prog = 0;
     int place_space = 0;
@@ -134,8 +153,5 @@ int main (void) {
         }
 
     }
-
-
-
     return 0;
 }

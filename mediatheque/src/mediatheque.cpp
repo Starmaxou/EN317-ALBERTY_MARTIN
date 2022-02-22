@@ -56,6 +56,18 @@ int Mediatheque::clearMedia() {
   return 0;
 }
 
+int Mediatheque::showID(int ID_search) {
+  for (int i = 0; i < _ressource.size() ; i++) {
+    if (_ressource[i]->_id == ID_search) {
+      cout << *(_ressource[i]);
+      return 0;
+    }
+  }
+  cout << "Cet ID n'est pas présent dans la base de donnée" << endl; 
+
+  return 0;
+}
+
 int Mediatheque::listMedia() {
 
     for (int i = 0; i < _ressource.size() ; i++) {

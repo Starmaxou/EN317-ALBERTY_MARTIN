@@ -16,7 +16,7 @@ int main(void)
     
     alpha.addMedia(&test);
     //cout << test;
-    alpha.listMedia();
+    alpha.showID(0);
 
     return 0;
 }

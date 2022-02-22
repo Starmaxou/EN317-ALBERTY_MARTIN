@@ -15,16 +15,16 @@ using namespace std;
 int main (void) {
 
     Mediatheque alpha;
-
     VHS test;
-    
     alpha.addMedia(&test);
-    cout << endl;
+    /*
+    
     alpha.showID(0);
     cout << endl;
     alpha.deleteID(0);
     cout << endl;
     alpha.showID(0);
+    */
 
     int exit_prog = 0;
     int place_space = 0;
@@ -32,7 +32,7 @@ int main (void) {
     string in_board, in_command, in_argument;
     int taille_board;
 
-    cout << "Bienvenue dans le gestionnaire de médiathèque ! Tapez HELP pour avoir les commandes" << endl << endl;
+    cout << "Bienvenue dans le gestionnaire de médiathèque !" << endl << "Tapez HELP pour avoir la liste des commandes" << endl << endl;
     
     while(!exit_prog) {
         // Récupération de la commande et paramétrage
@@ -110,6 +110,7 @@ int main (void) {
             }
             else {
                 cout << "Afffichage des informations de l'ID " << in_argument << endl << endl;
+                alpha.showID(stoi(in_argument));
             }
         }
         // DELETE : Suppression d'une ressource

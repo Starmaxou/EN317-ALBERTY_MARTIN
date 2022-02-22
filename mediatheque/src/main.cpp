@@ -15,7 +15,11 @@ int main(void)
     VHS test;
     
     alpha.addMedia(&test);
-    //cout << test;
+    cout << endl;
+    alpha.showID(0);
+    cout << endl;
+    alpha.deleteID(0);
+    cout << endl;
     alpha.showID(0);
 
     return 0;

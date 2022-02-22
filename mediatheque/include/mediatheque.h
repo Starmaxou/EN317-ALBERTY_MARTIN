@@ -25,6 +25,7 @@ class Mediatheque
         int deleteMedia();
 
         int showID(int ID_search);
+        int deleteID(int ID_delete);
 
         int listMedia();
         int searchMedia();

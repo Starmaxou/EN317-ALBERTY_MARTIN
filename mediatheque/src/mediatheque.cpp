@@ -68,6 +68,19 @@ int Mediatheque::showID(int ID_search) {
   return 0;
 }
 
+int Mediatheque::deleteID(int ID_delete) {
+  for (int i = 0; i < _ressource.size() ; i++) {
+    if (_ressource[i]->_id == ID_delete) {
+      _ressource.erase(_ressource.begin() + i);
+      cout << "L'ID " << i << " a bien été supprimé !" << endl;
+      return 0;
+    }
+  }
+  cout << "ID non trouvé" << endl;
+
+  return 0;
+}
+
 int Mediatheque::listMedia() {
 
     for (int i = 0; i < _ressource.size() ; i++) {

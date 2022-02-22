@@ -31,6 +31,8 @@ class Mediatheque
         int searchMedia();
         int clearMedia();
 
+        int resetRessource();
+
         int saveToFile();
         int loadFromFile();
         int bookMedia();

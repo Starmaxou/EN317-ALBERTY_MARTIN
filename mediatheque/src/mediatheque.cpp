@@ -89,3 +89,9 @@ int Mediatheque::listMedia() {
 
   return 0;
 }
+
+
+int Mediatheque::resetRessource() {
+  _ressource.clear();
+  return 0;
+}

@@ -36,6 +36,7 @@ int main (void) {
     cout << COLOR_GREEN;
     cout << "Bienvenue dans le gestionnaire de médiathèque !" << endl << "Tapez HELP pour avoir la liste des commandes" << endl << endl;
     cout << COLOR_RESET;
+ 
     while(!exit_prog) {
         // Récupération de la commande et paramétrage
         cout << endl
@@ -286,7 +287,7 @@ int main (void) {
             cout << COLOR_RED;
             cout << "La commande n'existe pas..." << endl;
             cout << COLOR_GREEN;
-            cout << "Veuillez réessayer" << endl << endl;
+            cout << "Veuillez réessayer ou entrez HELP pour avoir la liste des commandes !" << endl << endl;
             cout << COLOR_RESET;
         }
 

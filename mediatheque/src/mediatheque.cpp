@@ -95,3 +95,56 @@ int Mediatheque::resetRessource() {
   _ressource.clear();
   return 0;
 }
+
+int Mediatheque::saveToFile() {
+
+  return 0;
+}
+
+int Mediatheque::reserveMedia(int id) {
+  for (int i = 0; i < _ressource.size() ; i++) {
+    if (_ressource[i]->_id == id) {
+      if(!_ressource[i]->changeStatus(HOLD))
+      {
+        return EXIT_SUCCESS;
+      } else {
+        return EXIT_FAILURE;
+      }
+      
+    }
+  }
+  cout << "Cet ID n'est pas présent dans la base de donnée" << endl; 
+  return EXIT_FAILURE;
+}
+
+int Mediatheque::borrowMedia(int id) {
+  for (int i = 0; i < _ressource.size() ; i++) {
+    if (_ressource[i]->_id == id) {
+      if(!_ressource[i]->changeStatus(OUT))
+      {
+        return EXIT_SUCCESS;
+      } else {
+        return EXIT_FAILURE;
+      }
+      
+    }
+  }
+  cout << "Cet ID n'est pas présent dans la base de donnée" << endl; 
+  return EXIT_FAILURE;
+}
+
+int Mediatheque::returnMedia(int id) {
+  for (int i = 0; i < _ressource.size() ; i++) {
+    if (_ressource[i]->_id == id) {
+      if(!_ressource[i]->changeStatus(IN))
+      {
+        return EXIT_SUCCESS;
+      } else {
+        return EXIT_FAILURE;
+      }
+      
+    }
+  }
+  cout << "Cet ID n'est pas présent dans la base de donnée" << endl; 
+  return EXIT_FAILURE;
+}

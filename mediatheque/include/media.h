@@ -41,12 +41,12 @@ class Media
         
         // Surcharge
         friend ostream& operator<<(ostream& out, Media & s);
-        //friend ostream& operator<<(ostream& out, Media s);
 
         // Méthode
         virtual bool recherche(string search);
         virtual ostream& getInfo(ostream& out);
         void printList();
+        int changeStatus(status_media_t new_status);
 };      
 
 

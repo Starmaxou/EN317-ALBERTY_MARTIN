@@ -73,3 +73,37 @@ void Media::printList() {
     cout << endl;
     return;
 }
+
+int Media::changeStatus(status_media_t new_status) {
+    switch (this->_status)
+    {
+    case OUT:
+        if (new_status == IN) 
+        {
+            this->_status = new_status;
+            return EXIT_SUCCESS;
+        } else {
+            return EXIT_FAILURE;
+        }
+        break;
+    
+    case IN:
+        this->_status = new_status;
+        return EXIT_SUCCESS;
+        break;
+    
+    case HOLD:
+        if (new_status == IN) 
+        {
+            this->_status = new_status;
+            return EXIT_SUCCESS;
+        } else {
+            return EXIT_FAILURE;
+        }
+        break;
+    
+    default:
+        break;
+    }
+    return EXIT_FAILURE;
+}

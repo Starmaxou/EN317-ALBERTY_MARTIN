@@ -35,7 +35,10 @@ class Mediatheque
 
         int saveToFile();
         int loadFromFile();
-        int bookMedia();
+
+        int reserveMedia(int id);
+        int borrowMedia(int id);
+        int returnMedia(int id);
 
 };
 

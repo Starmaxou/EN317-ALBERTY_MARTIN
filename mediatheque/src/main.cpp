@@ -77,6 +77,78 @@ int main (void) {
                 cout <<"Ajout de : " << in_argument << endl << endl;
             }
         }
+        // RESERVE : Reserver un media
+        else if (in_command == "RESERVE") {
+            if (in_argument == "") {
+                cout << COLOR_RED;
+                cout << "Pas d'argument!" << endl << endl;
+                cout << COLOR_RESET;
+            }
+            else {
+                cout << COLOR_GREEN;
+                cout << "Demande de reservation du média (id : " 
+                     << COLOR_RED
+                     << in_argument << COLOR_GREEN << ")" << endl << endl
+                     << COLOR_RESET;
+                if(!alpha.reserveMedia(stoi(in_argument))){
+                    cout << COLOR_GREEN;
+                    cout << "Reservation" << COLOR_BOLDGREEN << " acceptée !";
+                    cout << COLOR_RESET;
+                } else {
+                    cout << COLOR_GREEN;
+                    cout << "Reservation" << COLOR_BOLDRED << " refusée !";
+                    cout << COLOR_RESET;
+                }
+            }
+        }
+        // BORROW : Emprunter un media
+        else if (in_command == "BORROW") {
+            if (in_argument == "") {
+                cout << COLOR_RED;
+                cout << "Pas d'argument!" << endl << endl;
+                cout << COLOR_RESET;
+            }
+            else {
+                cout << COLOR_GREEN;
+                cout << "Demande de d'emprunt du média (id : " 
+                     << COLOR_RED
+                     << in_argument << COLOR_GREEN << ")" << endl << endl
+                     << COLOR_RESET;
+                if(!alpha.borrowMedia(stoi(in_argument))){
+                    cout << COLOR_GREEN;
+                    cout << "Emprunt" << COLOR_BOLDGREEN << " acceptée !";
+                    cout << COLOR_RESET;
+                } else {
+                    cout << COLOR_GREEN;
+                    cout << "Emprunt" << COLOR_BOLDRED << " refusée !";
+                    cout << COLOR_RESET;
+                }
+            }
+        }
+        // RETURN : Emprunter un media
+        else if (in_command == "RETURN") {
+            if (in_argument == "") {
+                cout << COLOR_RED;
+                cout << "Pas d'argument!" << endl << endl;
+                cout << COLOR_RESET;
+            }
+            else {
+                cout << COLOR_GREEN;
+                cout << "Demande de retour du média (id : " 
+                     << COLOR_RED
+                     << in_argument << COLOR_GREEN << ")" << endl << endl
+                     << COLOR_RESET;
+                if(!alpha.returnMedia(stoi(in_argument))){
+                    cout << COLOR_GREEN;
+                    cout << "Retour" << COLOR_BOLDGREEN << " effectué !";
+                    cout << COLOR_RESET;
+                } else {
+                    cout << COLOR_GREEN;
+                    cout << "Retour" << COLOR_BOLDRED << " refusée !";
+                    cout << COLOR_RESET;
+                }
+            }
+        }
         // LOAD : Chargement dans un fichier
         else if (in_command == "LOAD") {
             if (in_argument == "") {
@@ -178,16 +250,19 @@ int main (void) {
             cout << COLOR_BOLDGREEN;
             cout << "Liste des commandes : " << endl
                  << COLOR_RESET << COLOR_GREEN 
-                 << "BYE           : Quitte le progremmae" << endl
-                 << "ADD t_media   : Ajout d'une nouvelle ressource de type 't_media'" << endl
-                 << "LOAD filename : Charge le contenu du fichier filename  dans la médiathèque" << endl
-                 << "SAVE filename : Sauvegarde le contenu du fichier filename dans la médiathèque" << endl 
-                 << "SEARCH chaine : Cherche dans la base de donnée l'argument 'chaine', la recherche est incrémental jusqu'au prochain clear" << endl
-                 << "CLEAR         : Clear la recherche" << endl
-                 << "LIST          : Affichage de la base de donnée" << endl
-                 << "SHOW id       : Affichage des informations du média à l'emplacement 'ID'" << endl
-                 << "DELETE id     : Supprime le média ID de la base de donnée" << endl 
-                 << "RESET         : Remise à zéro de l'ensemble de la base de donnée" << endl << endl
+                 << "BYE             : Quitte le progremmae" << endl
+                 << "ADD t_media     : Ajout d'une nouvelle ressource de type 't_media'" << endl
+                 << "Reserve <id>    : Reserver le média ID" << endl
+                 << "Borrow <id>     : Emprunter le média ID" << endl
+                 << "Return <id>     : Rendre le media ID" <<endl    
+                 << "LOAD <filename> : Charge le contenu du fichier filename  dans la médiathèque" << endl
+                 << "SAVE <filename> : Sauvegarde le contenu du fichier filename dans la médiathèque" << endl 
+                 << "SEARCH chaine   : Cherche dans la base de donnée l'argument 'chaine', la recherche est incrémental jusqu'au prochain clear" << endl
+                 << "CLEAR           : Clear la recherche" << endl
+                 << "LIST            : Affichage de la base de donnée" << endl
+                 << "SHOW <id>       : Affichage des informations du média à l'emplacement 'ID'" << endl
+                 << "DELETE <id>     : Supprime le média ID de la base de donnée" << endl 
+                 << "RESET           : Remise à zéro de l'ensemble de la base de donnée" << endl << endl
                  << COLOR_RESET;
         }
         // Commande non detecté

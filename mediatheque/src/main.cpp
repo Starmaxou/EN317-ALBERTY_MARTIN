@@ -298,7 +298,7 @@ int main (void) {
                  << COLOR_RESET << COLOR_GREEN 
                  << "BYE             : Quitte le progremmae" << endl
                  << "ADD <t_media>     : Ajout d'une nouvelle ressource de type 't_media'" << endl
-                 << "\t LIVRE -> 0 \t REVUE-> 1 \t CD -> 2 \t VHS -> 3 \t DVD -> 4 \t RessourceNum -> 5" << endl
+                 << "\t LIVRE \t REVUE \t CD \t VHS \t DVD \t RessourceNum" << endl
                  << "Reserve <id>    : Reserver le média ID" << endl
                  << "Borrow <id>     : Emprunter le média ID" << endl
                  << "Return <id>     : Rendre le media ID" <<endl    

@@ -18,7 +18,7 @@ class Revue : public Livre
         
     public:
         Revue();
-      
+        Revue(bool t);
         ostream& getInfo(ostream& out);
         bool recherche (string search);
 };

@@ -20,6 +20,7 @@ Livre::Livre(string auteur, string titre, string collection, int annee, int nbPa
     this->_resume = resume;
 }
 ostream& Livre::getInfo(ostream& out) {
+    out << "-- LIVRE -- " << endl;
     out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
     switch (this->_status) {

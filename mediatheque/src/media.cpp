@@ -29,6 +29,7 @@ ostream& operator<<(ostream& out, Media & s) {
 }
 
 ostream& Media::getInfo(ostream& out){
+    out << "-- MEDIA -- " << endl;
     out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
     switch (this->_status) {

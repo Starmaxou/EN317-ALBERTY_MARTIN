@@ -7,7 +7,9 @@ DVD::DVD()
     cout << "Entrez le nombre de piste : "; cin >> this->_nbPiste;
 }
 
+
 ostream& DVD::getInfo(ostream& out) {
+    out << "-- DVD -- " << endl;
     out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
     switch (this->_status) {

@@ -8,7 +8,7 @@ Revue::Revue()
 }
 
 ostream& Revue::getInfo(ostream& out) {
-
+    out << "-- REVUE -- " << endl;
     out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
     switch (this->_status) {

@@ -9,6 +9,9 @@
 #include "../include/DVD.h"
 #include "../include/VHS.h"
 #include "../include/CD.h"
+#include "../include/VHS.h"
+#include "../include/revue.h"
+#include "../include/ressourceNum.h"
 #include "../include/media.h"
 
 using namespace std;
@@ -16,8 +19,9 @@ using namespace std;
 int main (void) {
 
     Mediatheque alpha;
-    VHS test;
-    alpha.addMedia(&test);
+
+    //VHS test;
+    //alpha.addMedia(&test);
     /*
     
     alpha.showID(0);
@@ -75,8 +79,33 @@ int main (void) {
                 cout << COLOR_RESET;
             }
             else {
+                int ret_add = 1;
                 cout <<"Ajout de : " << in_argument << endl << endl;
-                if(!alpha.addMedia(stoi(in_argument)))
+                if (in_argument == "LIVRE") {
+                    Livre * media_add = new Livre;
+                    ret_add = alpha.addMedia(media_add);
+                }
+                else if (in_argument == "REVUE") {
+                    Revue * media_add = new Revue;
+                    ret_add = alpha.addMedia(media_add);
+                }
+                else if (in_argument == "CD") {
+                    CD * media_add = new CD;
+                    ret_add = alpha.addMedia(media_add);
+                }
+                else if (in_argument == "VHS") {
+                    VHS * media_add = new VHS;
+                    ret_add = alpha.addMedia(media_add);
+                }
+                else if (in_argument == "DVD") {
+                    DVD * media_add = new DVD;
+                    ret_add = alpha.addMedia(media_add);
+                }
+                else if (in_argument == "NUMERIQUE") {
+                    RessourceNum * media_add = new RessourceNum;
+                    ret_add = alpha.addMedia(media_add);
+                }
+                if(!ret_add)
                 {
                     cout << COLOR_GREEN;
                     cout << "L'ajout du média à" << COLOR_BOLDGREEN << " reussit !";
@@ -86,6 +115,7 @@ int main (void) {
                     cout << "L'ajout du média à" << COLOR_BOLDRED << " échoué !";
                     cout << COLOR_RESET;
                 }
+                cout << endl;
             }
         }
         // RESERVE : Reserver un media
@@ -294,3 +324,5 @@ int main (void) {
     }
     return 0;
 }
+
+

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 //#include "ressourceNum.h"
 //#include "livre.h"
@@ -37,6 +38,7 @@ class Media
         int _id;
         Media();
         Media(status_media_t status, string auteur);
+        Media(ifstream file);
 
         
         // Surcharge

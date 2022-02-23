@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <algorithm>
 #include "../include/CD.h"
 
 CD::CD()
@@ -6,6 +8,7 @@ CD::CD()
 {
     cout << "Entrez le titre : "; cin >> this->_titre;
 }
+
 
 ostream& operator<<(ostream& out, CD s) {
     
@@ -29,6 +32,7 @@ bool CD::recherche (string search) {
 }
 
 ostream& CD::getInfo(ostream& out) {
+    out << "-- CD -- " << endl;
     out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
     switch (this->_status) {

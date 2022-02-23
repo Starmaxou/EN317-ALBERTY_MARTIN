@@ -11,6 +11,7 @@ class DVD : public VHS
         
     public:
         DVD();
+        DVD(bool t);
         
         virtual ostream& getInfo(ostream& out);
         virtual bool recherche (string search);

@@ -117,9 +117,10 @@ int Mediatheque::clearMedia() {
 }
 
 int Mediatheque::showID(int ID_search) {
+
   for (int i = 0; i < _ressource.size() ; i++) {
     if (_ressource[i]->_id == ID_search) {
-      cout << *(_ressource[i]);
+      cout << *(_ressource[i]) << endl;;
       return 0;
     }
   }
@@ -157,7 +158,7 @@ int Mediatheque::resetRessource() {
 }
 
 int Mediatheque::saveToFile(string fileName) {
-  ofstream out (fileName + ".txt");
+  ofstream out ("../media/" + fileName + ".txt");
   std::streambuf *coutbuf = std::cout.rdbuf(); //sauvegarde du buffer cout
   std::cout.rdbuf(out.rdbuf()); //redirection de cout vers le fichier!
 
@@ -215,4 +216,9 @@ int Mediatheque::returnMedia(int id) {
   }
   cout << "Cet ID n'est pas présent dans la base de donnée" << endl; 
   return EXIT_FAILURE;
+}
+
+int Mediatheque::loadFromFile(string fileName) {
+
+  return 0;
 }

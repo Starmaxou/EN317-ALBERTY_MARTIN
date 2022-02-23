@@ -8,6 +8,7 @@ VHS::VHS():Media()
 }
 
 ostream& VHS::getInfo(ostream& out) {
+    out << "-- VHS -- " << endl;
     out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
     switch (this->_status) {

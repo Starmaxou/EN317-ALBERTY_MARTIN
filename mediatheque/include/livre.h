@@ -21,7 +21,6 @@ class Livre : public Media
         Livre();  
         Livre(string auteur, string titre, string collection, int annee, int anbPage, string resume);
 
-
        
         virtual ostream& getInfo(ostream& out);
         //Methode

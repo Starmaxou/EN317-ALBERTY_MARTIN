@@ -17,7 +17,7 @@ class RessourceNum : public Media
     public:
         RessourceNum();
         RessourceNum(string auteur, string nom, string type, int taille, string url);
-       
+        RessourceNum(bool t);
         ostream& getInfo(ostream& out);
         bool recherche(string search);
 };

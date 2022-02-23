@@ -13,6 +13,7 @@ class CD : public DVD
 
     public:
         CD();
+        CD(ifstream file);
         
         bool recherche(string search);
         ostream& getInfo(ostream& out);

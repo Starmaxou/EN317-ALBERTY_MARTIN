@@ -20,6 +20,7 @@ RessourceNum::RessourceNum(string auteur, string nom, string type, int taille, s
 }
 
 ostream& RessourceNum::getInfo(ostream& out) {
+    out << "-- RESSOURCENUM -- " << endl;
     out << "Auteur : " << this->_auteur << endl;
     out << "Status : ";
     switch (this->_status) {

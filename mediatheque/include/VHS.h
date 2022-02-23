@@ -2,6 +2,7 @@
 #define VHS_H
 
 #include <string>
+#include <fstream>
 #include "media.h"
 
 using namespace std;
@@ -14,7 +15,6 @@ class VHS : public Media
         
     public:
         VHS();
-        
         ostream& getInfo(ostream& out);
         virtual bool recherche(string search);
 };

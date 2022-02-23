@@ -75,6 +75,16 @@ int main (void) {
             }
             else {
                 cout <<"Ajout de : " << in_argument << endl << endl;
+                if(!alpha.addMedia(stoi(in_argument)))
+                {
+                    cout << COLOR_GREEN;
+                    cout << "L'ajout du média à" << COLOR_BOLDGREEN << " reussit !";
+                    cout << COLOR_RESET;
+                } else {
+                    cout << COLOR_GREEN;
+                    cout << "L'ajout du média à" << COLOR_BOLDRED << " échoué !";
+                    cout << COLOR_RESET;
+                }
             }
         }
         // RESERVE : Reserver un media
@@ -256,7 +266,8 @@ int main (void) {
             cout << "Liste des commandes : " << endl
                  << COLOR_RESET << COLOR_GREEN 
                  << "BYE             : Quitte le progremmae" << endl
-                 << "ADD t_media     : Ajout d'une nouvelle ressource de type 't_media'" << endl
+                 << "ADD <t_media>     : Ajout d'une nouvelle ressource de type 't_media'" << endl
+                 << "\t LIVRE -> 0 \t REVUE-> 1 \t CD -> 2 \t VHS -> 3 \t DVD -> 4 \t RessourceNum -> 5" << endl
                  << "Reserve <id>    : Reserver le média ID" << endl
                  << "Borrow <id>     : Emprunter le média ID" << endl
                  << "Return <id>     : Rendre le media ID" <<endl    

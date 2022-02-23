@@ -1,6 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include "../include/mediatheque.h"
+#include "../include/livre.h"
+#include "../include/DVD.h"
+#include "../include/VHS.h"
+#include "../include/CD.h"
+#include "../include/media.h"
+#include "../include/ressourceNum.h"
+#include "../include/revue.h"
 
 int ID_generate = 0;
 
@@ -21,6 +28,66 @@ int Mediatheque::addMedia(Media * mediaAdd) {
   ID_generate++;
 
   return 0;
+}
+
+int Mediatheque::addMedia(int media_type) {
+
+  switch (media_type)
+  {
+    case LIVRE:
+    {
+      Livre newMedia;
+      newMedia._id = ID_generate;
+      _ressource.push_back(&newMedia);
+      break;
+    }  
+    case REVUE:
+    {
+      Revue newMedia;
+      newMedia._id = ID_generate;
+      _ressource.push_back(&newMedia);
+      break;
+    }
+
+    case CD_T:
+    {
+      CD newMedia;
+      newMedia._id = ID_generate;
+      _ressource.push_back(&newMedia);
+      break;
+    }
+
+    case VHS_T:
+    {
+      VHS newMedia;
+      newMedia._id = ID_generate;
+      _ressource.push_back(&newMedia);
+      break;
+    }
+
+    case DVD_T:
+    {
+      DVD newMedia;
+      newMedia._id = ID_generate;
+      _ressource.push_back(&newMedia);
+      break;
+    }
+
+    case RESNUM:
+    {
+      RessourceNum newMedia;
+      newMedia._id = ID_generate;
+      _ressource.push_back(&newMedia);
+      break;
+    }
+    
+    default:
+      return EXIT_FAILURE;
+      break;
+  }
+  ID_generate++;
+
+  return EXIT_SUCCESS;
 }
 
 int Mediatheque::searchMedia() {

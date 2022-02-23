@@ -22,6 +22,7 @@ class Mediatheque
         ~Mediatheque();
 
         int addMedia(Media * mediaAdd);
+        int addMedia(int media_type);
         int deleteMedia();
 
         int showID(int ID_search);

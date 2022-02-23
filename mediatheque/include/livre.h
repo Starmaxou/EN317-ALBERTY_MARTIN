@@ -22,7 +22,7 @@ class Livre : public Media
         Livre(string auteur, string titre, string collection, int annee, int anbPage, string resume);
 
 
-        //friend ostream& operator<<(ostream& out, Livre s);
+       
         virtual ostream& getInfo(ostream& out);
         //Methode
         virtual bool recherche(string search);

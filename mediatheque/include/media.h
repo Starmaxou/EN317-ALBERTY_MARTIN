@@ -37,7 +37,7 @@ class Media
         int _id;
         Media();
         Media(status_media_t status, string auteur);
-        //virtual ~Media(){};
+
         
         // Surcharge
         friend ostream& operator<<(ostream& out, Media & s);

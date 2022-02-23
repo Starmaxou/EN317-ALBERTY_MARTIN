@@ -13,7 +13,7 @@ class CD : public DVD
 
     public:
         CD();
-        //friend ostream& operator<<(ostream& out, CD s);
+        
         bool recherche(string search);
         ostream& getInfo(ostream& out);
 };

@@ -168,7 +168,12 @@ int main (void) {
                 cout << COLOR_RESET;
             }
             else {
-                cout << "Sauvegarde de la médiathèque dans le fichier: " << in_argument << endl << endl;
+                cout << COLOR_GREEN;
+                cout << "Sauvegarde de la médiathèque dans le fichier: ";
+                cout << COLOR_RED;
+                cout << in_argument << ".txt" << endl << endl;
+                cout << COLOR_RESET;
+                alpha.saveToFile(in_argument);
             }
         }
         // SEARCH : Recherche dans la médiathèque

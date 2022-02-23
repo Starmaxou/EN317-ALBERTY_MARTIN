@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "../include/mediatheque.h"
 
 int ID_generate = 0;
@@ -96,8 +97,16 @@ int Mediatheque::resetRessource() {
   return 0;
 }
 
-int Mediatheque::saveToFile() {
+int Mediatheque::saveToFile(string fileName) {
+  ofstream out (fileName + ".txt");
+  std::streambuf *coutbuf = std::cout.rdbuf(); //sauvegarde du buffer cout
+  std::cout.rdbuf(out.rdbuf()); //redirection de cout vers le fichier!
 
+  for (int i = 0; i < _ressource.size() ; i++) {
+      this->showID(i);
+    }
+  std::cout.rdbuf(coutbuf); //Reset de cout vers la sortie standart
+  out.close(); //Fermeture du fichier
   return 0;
 }
 

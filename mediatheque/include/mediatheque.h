@@ -33,8 +33,8 @@ class Mediatheque
 
         int resetRessource();
 
-        int saveToFile();
-        int loadFromFile();
+        int saveToFile(string fileName);
+        int loadFromFile(string fileName);
 
         int reserveMedia(int id);
         int borrowMedia(int id);

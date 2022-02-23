@@ -13,7 +13,7 @@ int ID_generate = 0;
 
 Mediatheque::Mediatheque()
 {
-  //cout << "[DEBUG] - " << __PRETTY_FUNCTION__ << endl;
+  
 }
 
 Mediatheque::~Mediatheque()
@@ -37,47 +37,41 @@ int Mediatheque::addMedia(int media_type) {
     case LIVRE:
     {
       Livre newMedia;
-      newMedia._id = ID_generate;
-      _ressource.push_back(&newMedia);
+      this->addMedia(&newMedia);
       break;
     }  
     case REVUE:
     {
       Revue newMedia;
-      newMedia._id = ID_generate;
-      _ressource.push_back(&newMedia);
+      this->addMedia(&newMedia);
       break;
     }
 
     case CD_T:
     {
       CD newMedia;
-      newMedia._id = ID_generate;
-      _ressource.push_back(&newMedia);
+      this->addMedia(&newMedia);
       break;
     }
 
     case VHS_T:
     {
       VHS newMedia;
-      newMedia._id = ID_generate;
-      _ressource.push_back(&newMedia);
+      this->addMedia(&newMedia);
       break;
     }
 
     case DVD_T:
     {
       DVD newMedia;
-      newMedia._id = ID_generate;
-      _ressource.push_back(&newMedia);
+      this->addMedia(&newMedia);
       break;
     }
 
     case RESNUM:
     {
       RessourceNum newMedia;
-      newMedia._id = ID_generate;
-      _ressource.push_back(&newMedia);
+      this->addMedia(&newMedia);
       break;
     }
     
@@ -85,8 +79,6 @@ int Mediatheque::addMedia(int media_type) {
       return EXIT_FAILURE;
       break;
   }
-  ID_generate++;
-
   return EXIT_SUCCESS;
 }
 
@@ -140,7 +132,7 @@ int Mediatheque::deleteID(int ID_delete) {
   for (int i = 0; i < _ressource.size() ; i++) {
     if (_ressource[i]->_id == ID_delete) {
       _ressource.erase(_ressource.begin() + i);
-      cout << "L'ID " << i << " a bien été supprimé !" << endl;
+      cout << "L'ID " << ID_delete << " a bien été supprimé !" << endl;
       return 0;
     }
   }
